@@ -81,8 +81,7 @@ public/images/websites/say-studio-desktop.jpg
 public/images/websites/say-studio-mobile.jpg
 ```
 
-...and so on for tentplanner, cyberheed, ilus, skylab, devora, vm-cars, and
-webralo.
+...and so on for tentplanner, skylab, devora, vm-cars, and webralo.
 
 `/work/websites` is an index grid — one card per site (its desktop shot,
 name, industry). Clicking a card opens `/work/websites/[slug]`, a dedicated
@@ -102,10 +101,6 @@ image filenames), and drop its two screenshots in using that slug.
 - `src/content/about.ts` — the `experience` array is bracketed placeholder
   data (`[Company name]`, `[Job title]`, etc.). Replace with your real work
   history, or delete entries you don't want to show.
-- `src/content/webGallery.ts` — the CyberHeed entry has a bracketed
-  `industry`/`description` (cyberheed.com blocked automated fetches, so it
-  couldn't be verified) — fill those in once you can check the site
-  yourself.
 
 ## Design tokens
 

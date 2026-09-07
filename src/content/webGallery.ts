@@ -37,25 +37,6 @@ export const webGallery: WebGalleryItem[] = [
     mobile: { src: "/images/websites/tentplanner-mobile.jpg", alt: "TentPlanner — mobile", frame: "mobile" },
   },
   {
-    slug: "cyberheed",
-    name: "CyberHeed",
-    // TODO: couldn't fetch cyberheed.com to verify (server returned 403) — fill in the real industry/description.
-    industry: "[Industry]",
-    description: "[One line on the brief and what the design solves for.]",
-    url: "https://cyberheed.com/",
-    desktop: { src: "/images/websites/cyberheed-desktop.jpg", alt: "CyberHeed — desktop", frame: "desktop" },
-    mobile: { src: "/images/websites/cyberheed-mobile.jpg", alt: "CyberHeed — mobile", frame: "mobile" },
-  },
-  {
-    slug: "ilus",
-    name: "ILUS",
-    industry: "M&A / Investment",
-    description: "Global M&A group that acquires and scales innovative businesses across technology, manufacturing and defense.",
-    url: "https://ilus-group.com/",
-    desktop: { src: "/images/websites/ilus-desktop.jpg", alt: "ILUS — desktop", frame: "desktop" },
-    mobile: { src: "/images/websites/ilus-mobile.jpg", alt: "ILUS — mobile", frame: "mobile" },
-  },
-  {
     slug: "skylab",
     name: "SkyLab",
     industry: "Cloud Infrastructure",
