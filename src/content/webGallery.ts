@@ -46,15 +46,6 @@ export const webGallery: WebGalleryItem[] = [
     mobile: { src: "/images/websites/skylab-mobile.jpg", alt: "SkyLab — mobile", frame: "mobile" },
   },
   {
-    slug: "devora",
-    name: "Devora",
-    industry: "PR & Media Tech",
-    description: "An AI-powered platform for securing media coverage, amplifying credibility and tracking PR ROI.",
-    url: "https://www.devora.io/en",
-    desktop: { src: "/images/websites/devora-desktop.jpg", alt: "Devora — desktop", frame: "desktop" },
-    mobile: { src: "/images/websites/devora-mobile.jpg", alt: "Devora — mobile", frame: "mobile" },
-  },
-  {
     slug: "vm-cars",
     name: "VM Cars",
     industry: "Automotive",

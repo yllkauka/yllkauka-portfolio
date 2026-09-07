@@ -81,7 +81,7 @@ public/images/websites/say-studio-desktop.jpg
 public/images/websites/say-studio-mobile.jpg
 ```
 
-...and so on for tentplanner, skylab, devora, vm-cars, and webralo.
+...and so on for tentplanner, skylab, vm-cars, and webralo.
 
 `/work/websites` is an index grid — one card per site (its desktop shot,
 name, industry). Clicking a card opens `/work/websites/[slug]`, a dedicated
