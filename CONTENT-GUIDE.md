@@ -23,10 +23,7 @@ gallery) and look at the `src` field of each `VisualSpec`.
 **Swifty Sports, Nomos and NIXXE Gateway are now populated with real
 screenshots** (exported from `01_Swifty_Sports.pdf`/`SwiftySports.pdf`,
 `SwiftyCMS.pdf`, `NomosSystem.pdf`, `Nixxe.pdf` and the four brand PNGs on
-your Desktop, plus a second batch of real PNGs from
-`~/Desktop/Yllka Projects/Swifty/` covering the home page, horse racing,
-account/withdraw, and four mobile screens — home, football, bet history and
-live chat). `lifecard/` and `websites/` are still placeholders —
+your Desktop). `lifecard/` and `websites/` are still placeholders —
 same workflow applies once those PDFs are reviewed.
 
 Two screens were deliberately left out because they showed your personal

@@ -100,28 +100,10 @@ export const caseStudies: CaseStudy[] = [
         "The web platform needed to make a large amount of constantly changing information easy to scan. I designed clear hierarchy between sports, events, markets, odds and the bet slip — prioritising quick navigation and consistent interaction patterns.",
       visuals: [
         {
-          src: "/images/swifty-sports/home-desktop.jpg",
-          alt: "Swifty Sports website — home page, desktop",
-          frame: "desktop",
-          caption: "Home — sports, events & markets",
-        },
-        {
           src: "/images/swifty-sports/website-desktop.jpg",
           alt: "Swifty Sports website — sports and market view, desktop",
           frame: "desktop",
-          caption: "Event & market detail with bet slip",
-        },
-        {
-          src: "/images/swifty-sports/horse-racing-desktop.jpg",
-          alt: "Swifty Sports website — horse racing event detail, desktop",
-          frame: "desktop",
-          caption: "Horse racing — event detail",
-        },
-        {
-          src: "/images/swifty-sports/account-withdraw.jpg",
-          alt: "Swifty Sports website — account settings and withdraw",
-          frame: "desktop",
-          caption: "Account — settings & withdraw",
+          caption: "Sports, events & markets",
         },
       ],
     },
@@ -150,14 +132,10 @@ export const caseStudies: CaseStudy[] = [
         "The mobile app uses the same underlying logic and design system as the web experience, adapted for touch. I designed the experience across home, sports navigation, match markets, live/InPlay, casino and bet-related interactions.",
       visuals: [
         { src: "/images/swifty-sports/mobile-hub.jpg", alt: "Swifty Sports mobile app — hub home screen", frame: "mobile", caption: "Hub" },
-        { src: "/images/swifty-sports/home-mobile.jpg", alt: "Swifty Sports mobile app — home screen", frame: "mobile", caption: "Home" },
         { src: "/images/swifty-sports/app-mobile.jpg", alt: "Swifty Sports mobile app — match markets", frame: "mobile", caption: "Match markets" },
-        { src: "/images/swifty-sports/football-mobile.jpg", alt: "Swifty Sports mobile app — football, live events", frame: "mobile", caption: "Football — live events" },
         { src: "/images/swifty-sports/mobile-nav.jpg", alt: "Swifty Sports mobile app — sports navigation", frame: "mobile", caption: "Sports navigation" },
         { src: "/images/swifty-sports/mobile-inplay.jpg", alt: "Swifty Sports mobile app — InPlay live events", frame: "mobile", caption: "InPlay — live events" },
         { src: "/images/swifty-sports/mobile-casino.jpg", alt: "Swifty Sports mobile app — casino", frame: "mobile", caption: "Casino" },
-        { src: "/images/swifty-sports/bet-history-mobile.jpg", alt: "Swifty Sports mobile app — bet history", frame: "mobile", caption: "Bet history" },
-        { src: "/images/swifty-sports/live-chat-mobile.jpg", alt: "Swifty Sports mobile app — live chat support", frame: "mobile", caption: "Live chat — support" },
       ],
     },
     designSystem: {
