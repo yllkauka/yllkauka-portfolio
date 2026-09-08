@@ -81,20 +81,36 @@ public/images/websites/say-studio-desktop.jpg
 public/images/websites/say-studio-mobile.jpg
 ```
 
-...and so on for tentplanner, skylab, vm-cars, and webralo.
+...and so on for tentplanner, skylab, webralo, ylb-concept and
+tifera-solutions. **All of these are now populated with real full-page
+screenshots** (from `~/Desktop/Yllka Projects/Web & Digital Experiences/`).
+`vm-cars` is still a placeholder — no screenshots have been provided for it
+yet.
+
+These are full-page screenshots (can be many times taller than a single
+viewport), so they're shown through `<ProjectMockup>`
+(`src/components/ProjectMockup.tsx`), which drops each one into the site's
+existing browser/phone mockup frames, cropped to the frame's viewport shape
+and anchored to the **top** of the image — so the mockup shows the real
+header/hero rather than stretching into a long scrolling image. This reuses
+`<Visual crop>` under the hood (`object-cover` + top alignment); the same
+`crop` mode is what the `/work` and `/work/websites` thumbnail grids use for
+card covers, for the same reason.
 
 `/work/websites` is an index grid — one card per site (its desktop shot,
 name, industry). Clicking a card opens `/work/websites/[slug]`, a dedicated
-page showing that site's desktop + mobile screenshots at full size, its
-description, and a link to the live site. Both pages, and the "View the Web
-& Digital Experiences gallery" links on Home and Work, only appear once at
-least one entry's desktop screenshot exists on disk — same auto-detect
+page rendering that site's desktop + mobile screenshots via `<ProjectMockup>`,
+its description, and a link to the live site. Both pages, and the "View the
+Web & Digital Experiences gallery" links on Home and Work, only appear once
+at least one entry's desktop screenshot exists on disk — same auto-detect
 mechanism as everything else on the site, so there's nothing to switch on
 manually.
 
-To add another site beyond the current nine, copy an entry's shape in
+To add another site beyond the current eight, copy an entry's shape in
 `webGallery.ts`, give it a new unique `slug` (used for both its URL and its
-image filenames), and drop its two screenshots in using that slug.
+image filenames), and drop its two screenshots in using that slug —
+`<ProjectMockup>` handles the framing automatically, full-page screenshots
+included.
 
 ## Things marked as placeholders — replace before publishing
 

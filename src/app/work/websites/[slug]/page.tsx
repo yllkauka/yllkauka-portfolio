@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/Container";
 import { Reveal } from "@/components/Reveal";
-import { ImageGallery } from "@/components/ImageGallery";
+import { ProjectMockup } from "@/components/ProjectMockup";
 import { Tag } from "@/components/Tag";
 import { Button } from "@/components/Button";
 import { webGallery, getWebGalleryItem } from "@/content/webGallery";
@@ -28,7 +28,6 @@ export default async function WebsiteDetailPage(props: PageProps<"/work/websites
   const item = getWebGalleryItem(slug);
   if (!item) notFound();
 
-  const items = item.mobile ? [item.desktop, item.mobile] : [item.desktop];
   const urlLabel = item.url?.replace(/^https?:\/\//, "").replace(/\/$/, "");
 
   return (
@@ -62,7 +61,7 @@ export default async function WebsiteDetailPage(props: PageProps<"/work/websites
 
       <Container className="mt-14 sm:mt-16">
         <Reveal>
-          <ImageGallery items={items} layout="responsive" />
+          <ProjectMockup desktop={item.desktop} mobile={item.mobile} priority />
         </Reveal>
       </Container>
 

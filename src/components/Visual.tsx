@@ -82,9 +82,11 @@ export function Visual({
   visual: VisualSpec;
   priority?: boolean;
   sizes?: string;
-  /** Force the frame's fixed aspect ratio and crop to fill it — used for
-   * thumbnail grids (project cards) so every tile shares one visual
-   * language. In-case-study screenshots leave this off so nothing crops. */
+  /** Force the frame's fixed (viewport-shaped) aspect ratio and crop to fill
+   * it, anchored to the top of the image — used for thumbnail grids and full
+   * page screenshots dropped into a browser/phone mockup, so a tall
+   * full-page capture shows its header/hero rather than stretching the
+   * frame. In-case-study screenshots leave this off so nothing crops. */
   crop?: boolean;
 }) {
   const hasImage = imageExists(visual.src);
@@ -105,7 +107,7 @@ export function Visual({
             fill
             priority={priority}
             sizes={sizes}
-            className={crop ? "object-cover" : "object-contain"}
+            className={crop ? "object-cover object-top" : "object-contain"}
           />
         ) : (
           <PlaceholderFill label={label} />
