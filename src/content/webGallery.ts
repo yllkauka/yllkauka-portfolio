@@ -17,6 +17,13 @@ export const webGallery: WebGalleryItem[] = [
     url: "https://www.swiftyglobal.com/",
     desktop: { src: "/images/websites/swifty-global-desktop.jpg", alt: "Swifty Global — desktop", frame: "desktop" },
     mobile: { src: "/images/websites/swifty-global-mobile.jpg", alt: "Swifty Global — mobile", frame: "mobile" },
+    scope: ["UX/UI", "Responsive Web", "Visual Design"],
+    designFocus: [
+      "Clear content hierarchy",
+      "Responsive layouts",
+      "Consistent visual language",
+      "Conversion-focused calls to action",
+    ],
   },
   {
     slug: "say-studio",
@@ -26,6 +33,13 @@ export const webGallery: WebGalleryItem[] = [
     url: "https://www.saystudio.com/",
     desktop: { src: "/images/websites/say-studio-desktop.jpg", alt: "Say Studio — desktop", frame: "desktop" },
     mobile: { src: "/images/websites/say-studio-mobile.jpg", alt: "Say Studio — mobile", frame: "mobile" },
+    scope: ["UX/UI", "Responsive Web", "Visual Design"],
+    designFocus: [
+      "Editorial project layouts",
+      "Clear content hierarchy",
+      "Responsive project galleries",
+      "Consistent visual language",
+    ],
   },
   {
     slug: "tentplanner",
@@ -35,6 +49,13 @@ export const webGallery: WebGalleryItem[] = [
     url: "https://www.tentplanner.co.uk/",
     desktop: { src: "/images/websites/tentplanner-desktop.jpg", alt: "TentPlanner — desktop", frame: "desktop" },
     mobile: { src: "/images/websites/tentplanner-mobile.jpg", alt: "TentPlanner — mobile", frame: "mobile" },
+    scope: ["Product Design", "UX/UI", "Interaction Design"],
+    designFocus: [
+      "Guided step-by-step flow",
+      "Clear interactive controls",
+      "Intuitive navigation",
+      "Consistent visual language",
+    ],
   },
   {
     slug: "skylab",
@@ -44,6 +65,13 @@ export const webGallery: WebGalleryItem[] = [
     url: "https://www.skylabteam.com/fusionflow-overview",
     desktop: { src: "/images/websites/skylab-desktop.jpg", alt: "SkyLab — desktop", frame: "desktop" },
     mobile: { src: "/images/websites/skylab-mobile.jpg", alt: "SkyLab — mobile", frame: "mobile" },
+    scope: ["UX/UI", "Responsive Web", "Visual Design"],
+    designFocus: [
+      "Clear content hierarchy",
+      "Technical content made approachable",
+      "Responsive layouts",
+      "Consistent visual language",
+    ],
   },
   {
     slug: "vm-cars",
@@ -53,6 +81,13 @@ export const webGallery: WebGalleryItem[] = [
     url: "https://vmcars.ch/",
     desktop: { src: "/images/websites/vm-cars-desktop.jpg", alt: "VM Cars — desktop", frame: "desktop" },
     mobile: { src: "/images/websites/vm-cars-mobile.jpg", alt: "VM Cars — mobile", frame: "mobile" },
+    scope: ["UX/UI", "Responsive Web", "Visual Design"],
+    designFocus: [
+      "Premium visual direction",
+      "Clear content hierarchy",
+      "Responsive layouts",
+      "Intuitive navigation",
+    ],
   },
   {
     slug: "webralo",
@@ -62,6 +97,13 @@ export const webGallery: WebGalleryItem[] = [
     url: "https://webralo.de/",
     desktop: { src: "/images/websites/webralo-desktop.jpg", alt: "Webralo — desktop", frame: "desktop" },
     mobile: { src: "/images/websites/webralo-mobile.jpg", alt: "Webralo — mobile", frame: "mobile" },
+    scope: ["UX/UI", "Responsive Web", "Visual Design"],
+    designFocus: [
+      "Clear content hierarchy",
+      "Responsive layouts",
+      "Consistent visual language",
+      "Intuitive navigation",
+    ],
   },
   {
     slug: "ylb-concept",
@@ -71,6 +113,13 @@ export const webGallery: WebGalleryItem[] = [
     url: "https://www.ylbconcept.ch/",
     desktop: { src: "/images/websites/ylb-concept-desktop.jpg", alt: "YLB Concept — desktop", frame: "desktop" },
     mobile: { src: "/images/websites/ylb-concept-mobile.jpg", alt: "YLB Concept — mobile", frame: "mobile" },
+    scope: ["UX/UI", "Responsive Web", "Visual Design"],
+    designFocus: [
+      "Product-focused layout",
+      "Clear content hierarchy",
+      "Responsive layouts",
+      "Conversion-focused calls to action",
+    ],
   },
   {
     slug: "tifera-solutions",
@@ -80,6 +129,13 @@ export const webGallery: WebGalleryItem[] = [
     url: "https://tiferasolutions.ch/",
     desktop: { src: "/images/websites/tifera-solutions-desktop.jpg", alt: "Tifera Solutions — desktop", frame: "desktop" },
     mobile: { src: "/images/websites/tifera-solutions-mobile.jpg", alt: "Tifera Solutions — mobile", frame: "mobile" },
+    scope: ["UX/UI", "Responsive Web", "Visual Design"],
+    designFocus: [
+      "Clear content hierarchy",
+      "Trust-building visual direction",
+      "Responsive layouts",
+      "Intuitive navigation",
+    ],
   },
   {
     slug: "lifecard",
@@ -90,6 +146,13 @@ export const webGallery: WebGalleryItem[] = [
     // Mobile-only product — no desktop site to show, so `desktop` is omitted
     // on purpose (see the WebGalleryItem comment in content/types.ts).
     mobile: { src: "/images/websites/lifecard-mobile.jpg", alt: "Lifecard — mobile", frame: "mobile" },
+    scope: ["Product Design", "UX/UI", "Mobile App Design"],
+    designFocus: [
+      "Simple, accessible interactions",
+      "Clear information hierarchy",
+      "Consistent visual language",
+      "Mobile-first design",
+    ],
   },
 ];
 

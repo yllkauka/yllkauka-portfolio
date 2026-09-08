@@ -20,7 +20,7 @@ const maxWidthClass: Partial<Record<Frame, string>> = {
   tablet: "mx-auto max-w-[420px]",
 };
 
-function PlaceholderFill({ label }: { label: string }) {
+export function PlaceholderFill({ label }: { label: string }) {
   return (
     <div
       className="absolute inset-0 flex items-end justify-start p-4"
@@ -38,7 +38,7 @@ function PlaceholderFill({ label }: { label: string }) {
   );
 }
 
-function Chrome({ frame, children }: { frame: Frame; children: React.ReactNode }) {
+export function Chrome({ frame, children }: { frame: Frame; children: React.ReactNode }) {
   if (frame === "desktop") {
     return (
       <div className="flex h-full w-full flex-col overflow-hidden rounded-lg border border-line bg-paper-dim">

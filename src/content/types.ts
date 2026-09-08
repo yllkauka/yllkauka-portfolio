@@ -103,4 +103,14 @@ export interface WebGalleryItem {
    * of `desktop`/`mobile` must be present. */
   desktop?: VisualSpec;
   mobile?: VisualSpec;
+  /** Short scope tags for the detail page's metadata row, e.g.
+   * ["UX/UI", "Responsive Web", "Visual Design"]. */
+  scope: string[];
+  /** 3-4 short design-focus points for the detail page — not a case study,
+   * just a few concrete things the design pays attention to. */
+  designFocus: string[];
+  /** Additional screenshots beyond the main desktop/mobile pair, shown in a
+   * "More from the project" gallery. Omit when none exist rather than
+   * duplicating the main showcase images. */
+  gallery?: VisualSpec[];
 }
