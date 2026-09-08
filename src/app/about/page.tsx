@@ -55,7 +55,7 @@ export default function AboutPage() {
           <Reveal>
             <SectionHeader eyebrow="What I do" heading="Core areas of focus" />
           </Reveal>
-          <div className="mt-12 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5 [&>*:last-child]:col-span-2 lg:[&>*:last-child]:col-span-1">
+          <div className="mt-12 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5 sm:[&>*:last-child]:col-span-2 lg:[&>*:last-child]:col-span-1">
             {whatIDo.map((item, i) => (
               <Reveal key={item.title} delay={i * 80}>
                 <CapabilityItem title={item.title} description={item.description} accent={item.accent} />
