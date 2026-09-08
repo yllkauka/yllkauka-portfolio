@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Container } from "@/components/Container";
 import { SectionHeader } from "@/components/SectionHeader";
 import { ProjectCard } from "@/components/ProjectCard";
+import { OtherProjectsSection } from "@/components/OtherProjectsSection";
 import { Reveal } from "@/components/Reveal";
 import { getCaseStudy } from "@/content/caseStudies";
+import { webGallery } from "@/content/webGallery";
 
 export const metadata: Metadata = {
   title: "Work",
@@ -14,6 +15,12 @@ export const metadata: Metadata = {
 const swifty = getCaseStudy("swifty-sports")!;
 const nomos = getCaseStudy("nomos")!;
 const nixxe = getCaseStudy("nixxe-gateway")!;
+
+// A curated slice of the wider Web & Digital Experiences gallery — enough to
+// signal there's more work without competing with the 3 featured projects.
+const otherProjects = ["swifty-global", "say-studio", "skylab", "vm-cars", "webralo", "ylb-concept"]
+  .map((slug) => webGallery.find((w) => w.slug === slug))
+  .filter((w): w is NonNullable<typeof w> => Boolean(w));
 
 export default function WorkPage() {
   return (
@@ -64,28 +71,7 @@ export default function WorkPage() {
           </Reveal>
         </div>
 
-        <Reveal>
-          <div className="mt-20 flex flex-col gap-6 border-t border-line pt-10 sm:mt-24 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <h3 className="font-serif text-xl font-medium tracking-tight text-ink sm:text-2xl">
-                Other Projects
-              </h3>
-              <p className="mt-2 max-w-md text-sm leading-relaxed text-ink-soft">
-                A selection of additional digital products, websites and experiences across different
-                industries.
-              </p>
-            </div>
-            <Link
-              href="/work/websites"
-              className="focus-ring group flex shrink-0 items-center gap-1.5 text-sm font-medium text-accent-ink"
-            >
-              Explore other projects
-              <span aria-hidden className="inline-block transition-transform duration-300 group-hover:translate-x-1">
-                →
-              </span>
-            </Link>
-          </div>
-        </Reveal>
+        <OtherProjectsSection projects={otherProjects} />
       </Container>
     </div>
   );
