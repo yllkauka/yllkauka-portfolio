@@ -11,6 +11,7 @@ export function ProjectCard({
   role,
   tags,
   cover,
+  coverSlot,
   priority = false,
   featured = false,
   ctaLabel = "View case study",
@@ -21,7 +22,12 @@ export function ProjectCard({
   description: string;
   role?: string;
   tags: string[];
-  cover: VisualSpec;
+  /** The card's screenshot. Omit in favour of `coverSlot` for a bespoke
+   * cover treatment (e.g. a mobile-only project's phone mockup). */
+  cover?: VisualSpec;
+  /** Overrides the default `<Visual crop>` cover with custom markup, while
+   * keeping the same rounded/overflow-hidden hover-scale wrapper around it. */
+  coverSlot?: React.ReactNode;
   priority?: boolean;
   featured?: boolean;
   ctaLabel?: string;
@@ -30,12 +36,15 @@ export function ProjectCard({
     <Link href={href} className="focus-ring group block">
       <div className="overflow-hidden rounded-lg">
         <div className="transition-transform duration-700 ease-out group-hover:scale-[1.02]">
-          <Visual
-            visual={cover}
-            priority={priority}
-            crop
-            sizes={featured ? "(min-width: 1024px) 100vw, 100vw" : "(min-width: 1024px) 50vw, 100vw"}
-          />
+          {coverSlot ??
+            (cover && (
+              <Visual
+                visual={cover}
+                priority={priority}
+                crop
+                sizes={featured ? "(min-width: 1024px) 100vw, 100vw" : "(min-width: 1024px) 50vw, 100vw"}
+              />
+            ))}
         </div>
       </div>
       <div className="mt-5">

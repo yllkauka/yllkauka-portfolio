@@ -98,6 +98,9 @@ export interface WebGalleryItem {
   description: string;
   /** Live site URL, shown as a link when present */
   url?: string;
-  desktop: VisualSpec;
+  /** Omit for a mobile-only product (no desktop site to show) — the card
+   * and detail page fall back to a mobile-only presentation. At least one
+   * of `desktop`/`mobile` must be present. */
+  desktop?: VisualSpec;
   mobile?: VisualSpec;
 }

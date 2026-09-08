@@ -2,11 +2,11 @@ import type { WebGalleryItem } from "./types";
 import { imageExists } from "@/lib/media";
 
 /**
- * Curated web design gallery. Each entry needs exactly two screenshots —
- * one desktop, one mobile — dropped in at the paths below. An entry only
- * appears (in the index grid and at /work/websites/[slug]) once its desktop
- * screenshot exists — see CONTENT-GUIDE.md. Add more entries as you send
- * them; keep the list curated rather than exhaustive.
+ * Curated web design gallery. Each entry needs a desktop and/or a mobile
+ * screenshot dropped in at the paths below (a mobile-only product, like
+ * Lifecard, omits `desktop` and shows a mobile-mockup card instead) — see
+ * CONTENT-GUIDE.md. Add more entries as you send them; keep the list
+ * curated rather than exhaustive.
  */
 export const webGallery: WebGalleryItem[] = [
   {
@@ -81,13 +81,24 @@ export const webGallery: WebGalleryItem[] = [
     desktop: { src: "/images/websites/tifera-solutions-desktop.jpg", alt: "Tifera Solutions — desktop", frame: "desktop" },
     mobile: { src: "/images/websites/tifera-solutions-mobile.jpg", alt: "Tifera Solutions — mobile", frame: "mobile" },
   },
+  {
+    slug: "lifecard",
+    name: "Lifecard",
+    industry: "Healthcare / Mobile App",
+    description:
+      "A healthcare mobile app designed to give users a simple, accessible way to manage and interact with their health information.",
+    // Mobile-only product — no desktop site to show, so `desktop` is omitted
+    // on purpose (see the WebGalleryItem comment in content/types.ts).
+    mobile: { src: "/images/websites/lifecard-mobile.jpg", alt: "Lifecard — mobile", frame: "mobile" },
+  },
 ];
 
 export function getWebGalleryItem(slug: string) {
   return webGallery.find((item) => item.slug === slug);
 }
 
-/** An entry only "exists" publicly once its desktop screenshot has been dropped in. */
+/** An entry only "exists" publicly once its cover screenshot (desktop, or
+ * mobile for a mobile-only product) has been dropped in. */
 export function getPublishedWebGallery() {
-  return webGallery.filter((item) => imageExists(item.desktop.src));
+  return webGallery.filter((item) => imageExists((item.desktop ?? item.mobile)!.src));
 }

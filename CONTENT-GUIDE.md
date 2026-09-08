@@ -82,8 +82,22 @@ public/images/websites/say-studio-mobile.jpg
 ```
 
 ...and so on for tentplanner, skylab, webralo, ylb-concept, tifera-solutions
-and vm-cars. **All eight entries are now populated with real full-page
+and vm-cars. **All eight of those entries are populated with real full-page
 screenshots** (from `~/Desktop/Yllka Projects/Web & Digital Experiences/`).
+
+The ninth entry, **Lifecard, is mobile-only** — it omits `desktop` entirely
+(see the `WebGalleryItem` comment in `content/types.ts`) and only needs:
+
+```
+public/images/websites/lifecard-mobile.jpg
+```
+
+No real file exists for it yet, so it currently shows as a placeholder —
+a dashed-border phone outline instead of a live screenshot — via
+`<MobileThumb>` (`src/components/MobileThumb.tsx`) on the index grid, and via
+`<ProjectMockup>`'s mobile-only branch on its detail page. Drop the real
+screenshot in at that path and both swap in automatically, same as
+everywhere else on the site.
 
 These are full-page screenshots (can be many times taller than a single
 viewport), so they're shown through `<ProjectMockup>`
@@ -104,11 +118,11 @@ at least one entry's desktop screenshot exists on disk — same auto-detect
 mechanism as everything else on the site, so there's nothing to switch on
 manually.
 
-To add another site beyond the current eight, copy an entry's shape in
+To add another site beyond the current nine, copy an entry's shape in
 `webGallery.ts`, give it a new unique `slug` (used for both its URL and its
-image filenames), and drop its two screenshots in using that slug —
-`<ProjectMockup>` handles the framing automatically, full-page screenshots
-included.
+image filenames), and drop its screenshot(s) in using that slug —
+`<ProjectMockup>` and `<MobileThumb>` handle the framing automatically,
+full-page screenshots and mobile-only products included.
 
 ## Things marked as placeholders — replace before publishing
 

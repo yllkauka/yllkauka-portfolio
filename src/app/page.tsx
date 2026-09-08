@@ -123,7 +123,7 @@ export default function Home() {
                       <div key={item.slug} className="w-1/3 overflow-hidden rounded-lg">
                         <div className="transition-transform duration-700 ease-out group-hover:scale-[1.02]">
                           <Visual
-                            visual={{ ...item.desktop, frame: "plain" }}
+                            visual={{ ...item.desktop!, frame: "plain" }}
                             crop
                             sizes="140px"
                           />
