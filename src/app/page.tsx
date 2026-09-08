@@ -6,11 +6,21 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { CapabilityItem } from "@/components/CapabilityItem";
 import { Statement } from "@/components/Statement";
 import { Reveal } from "@/components/Reveal";
-import { publishedCaseStudies } from "@/content/caseStudies";
+import { Visual } from "@/components/Visual";
+import { Tag } from "@/components/Tag";
+import { getCaseStudy } from "@/content/caseStudies";
+import { webGallery } from "@/content/webGallery";
 import { site } from "@/content/site";
 import { about, whatIDo } from "@/content/about";
 
-const projectNumbers = ["01", "02", "03", "04", "05", "06"];
+// Curated copy for the four Selected Work quadrants — intentionally short
+// and distinct from each case study's own longer description/tag set.
+const swifty = getCaseStudy("swifty-sports")!;
+const nomos = getCaseStudy("nomos")!;
+const nixxe = getCaseStudy("nixxe-gateway")!;
+const otherThumbs = ["say-studio", "skylab", "vm-cars"]
+  .map((slug) => webGallery.find((w) => w.slug === slug))
+  .filter((w): w is NonNullable<typeof w> => Boolean(w));
 
 export default function Home() {
   return (
@@ -59,36 +69,96 @@ export default function Home() {
             />
           </Reveal>
 
-          <div className="mt-14 grid grid-cols-1 gap-x-10 gap-y-16 sm:grid-cols-2">
-            {publishedCaseStudies.map((project, i) => (
-              <Reveal key={project.slug} delay={i * 80} className={i === 0 ? "sm:col-span-2" : undefined}>
+          <div className="mt-16 grid grid-cols-1 gap-x-10 gap-y-20 sm:grid-cols-2 sm:gap-y-24">
+            {/* 01 — Swifty Sports */}
+            <Reveal>
+              <div className="max-w-[400px]">
                 <ProjectCard
-                  href={`/work/${project.slug}`}
-                  number={projectNumbers[i]}
-                  name={project.name}
-                  description={project.description}
-                  role={project.role}
-                  tags={project.projectType}
-                  cover={project.cover}
-                  priority={i < 2}
-                  featured={i === 0}
+                  href="/work/swifty-sports"
+                  number="01"
+                  name="Swifty Sports"
+                  description="A multi-platform sports betting product spanning web, mobile and CMS experiences."
+                  tags={["Product Design", "Web", "Mobile", "SaaS"]}
+                  cover={swifty.cover}
+                  priority
                 />
-              </Reveal>
-            ))}
-          </div>
+              </div>
+            </Reveal>
 
-          <Reveal>
-            <p className="mt-16 text-sm text-ink-soft">
-              Alongside product design, I&rsquo;ve designed 50+ websites and digital experiences
-              across different industries.{" "}
-              <Link
-                href="/work/websites"
-                className="focus-ring text-ink underline underline-offset-4 decoration-line hover:decoration-accent"
-              >
-                View the Web &amp; Digital Experiences gallery →
-              </Link>
-            </p>
-          </Reveal>
+            {/* 02 — Nomos System */}
+            <Reveal delay={80}>
+              <div className="max-w-[380px] sm:ml-auto sm:mt-10">
+                <ProjectCard
+                  href="/work/nomos"
+                  number="02"
+                  name="Nomos System"
+                  description="A digital workplace system designed to connect people, spaces and everyday operations."
+                  tags={["Product Design", "UX/UI", "System"]}
+                  cover={nomos.cover}
+                  priority
+                />
+              </div>
+            </Reveal>
+
+            {/* 03 — NIXXE Gateway */}
+            <Reveal delay={160}>
+              <div className="max-w-[340px] sm:ml-16">
+                <ProjectCard
+                  href="/work/nixxe-gateway"
+                  number="03"
+                  name="NIXXE Gateway"
+                  description="An enterprise platform designed to simplify complex operational workflows and data."
+                  tags={["Product Design", "Web", "Enterprise"]}
+                  cover={nixxe.cover}
+                />
+              </div>
+            </Reveal>
+
+            {/* 04 — Other Projects */}
+            <Reveal delay={240}>
+              <div className="max-w-[380px] sm:ml-auto sm:mt-10">
+                <Link href="/work/websites" className="focus-ring group block">
+                  <div className="flex gap-3">
+                    {otherThumbs.map((item) => (
+                      <div key={item.slug} className="w-1/3 overflow-hidden rounded-lg">
+                        <div className="transition-transform duration-700 ease-out group-hover:scale-[1.02]">
+                          <Visual
+                            visual={{ ...item.desktop, frame: "plain" }}
+                            crop
+                            sizes="140px"
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="mt-5">
+                    <p className="mb-1.5 text-xs font-medium uppercase tracking-[0.16em] text-accent-ink">04</p>
+                    <h3 className="font-serif text-xl font-medium tracking-tight text-ink transition-transform duration-300 group-hover:translate-x-0.5">
+                      Other Projects
+                    </h3>
+                    <p className="mt-2 max-w-md text-sm leading-relaxed text-ink-soft">
+                      A selection of additional digital products, interfaces and experiments across
+                      different industries.
+                    </p>
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {["Product Design", "UX/UI", "Digital"].map((tag) => (
+                        <Tag key={tag}>{tag}</Tag>
+                      ))}
+                    </div>
+                    <p className="mt-4 flex items-center gap-1.5 text-sm font-medium text-accent-ink">
+                      Explore projects
+                      <span
+                        aria-hidden
+                        className="inline-block transition-transform duration-300 group-hover:translate-x-1"
+                      >
+                        →
+                      </span>
+                    </p>
+                  </div>
+                </Link>
+              </div>
+            </Reveal>
+          </div>
         </Container>
       </section>
 
