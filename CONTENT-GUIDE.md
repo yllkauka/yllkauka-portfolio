@@ -81,11 +81,9 @@ public/images/websites/say-studio-desktop.jpg
 public/images/websites/say-studio-mobile.jpg
 ```
 
-...and so on for tentplanner, skylab, webralo, ylb-concept and
-tifera-solutions. **All of these are now populated with real full-page
+...and so on for tentplanner, skylab, webralo, ylb-concept, tifera-solutions
+and vm-cars. **All eight entries are now populated with real full-page
 screenshots** (from `~/Desktop/Yllka Projects/Web & Digital Experiences/`).
-`vm-cars` is still a placeholder — no screenshots have been provided for it
-yet.
 
 These are full-page screenshots (can be many times taller than a single
 viewport), so they're shown through `<ProjectMockup>`
