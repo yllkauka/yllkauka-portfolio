@@ -4,14 +4,16 @@ import { Container } from "@/components/Container";
 import { SectionHeader } from "@/components/SectionHeader";
 import { ProjectCard } from "@/components/ProjectCard";
 import { Reveal } from "@/components/Reveal";
-import { publishedCaseStudies } from "@/content/caseStudies";
+import { getCaseStudy } from "@/content/caseStudies";
 
 export const metadata: Metadata = {
   title: "Work",
   description: "Products I've designed from complex systems to everyday experiences.",
 };
 
-const projectNumbers = ["01", "02", "03", "04", "05", "06"];
+const swifty = getCaseStudy("swifty-sports")!;
+const nomos = getCaseStudy("nomos")!;
+const nixxe = getCaseStudy("nixxe-gateway")!;
 
 export default function WorkPage() {
   return (
@@ -25,35 +27,64 @@ export default function WorkPage() {
           />
         </Reveal>
 
-        <div className="mt-14 grid grid-cols-1 gap-x-10 gap-y-16 sm:grid-cols-2">
-          {publishedCaseStudies.map((project, i) => (
-            <Reveal key={project.slug} delay={i * 80} className={i === 0 ? "sm:col-span-2" : undefined}>
-              <ProjectCard
-                href={`/work/${project.slug}`}
-                number={projectNumbers[i]}
-                name={project.name}
-                description={project.description}
-                role={project.role}
-                tags={project.projectType}
-                cover={project.cover}
-                priority={i < 2}
-                featured={i === 0}
-              />
-            </Reveal>
-          ))}
+        <div className="mt-16 grid grid-cols-1 gap-x-8 gap-y-16 sm:mt-20 sm:grid-cols-3">
+          <Reveal>
+            <ProjectCard
+              href="/work/swifty-sports"
+              number="01"
+              name="Swifty Sports"
+              description="A multi-platform sports betting product spanning web, mobile and CMS experiences."
+              tags={["Product Design", "Web", "Mobile", "SaaS"]}
+              cover={{ ...swifty.cover, frame: "desktop" }}
+              priority
+            />
+          </Reveal>
+
+          <Reveal delay={80}>
+            <ProjectCard
+              href="/work/nomos"
+              number="02"
+              name="Nomos System"
+              description="A digital workplace system designed to connect people, spaces and everyday operations."
+              tags={["Product Design", "UX/UI", "System"]}
+              cover={{ ...nomos.cover, frame: "desktop" }}
+              priority
+            />
+          </Reveal>
+
+          <Reveal delay={160}>
+            <ProjectCard
+              href="/work/nixxe-gateway"
+              number="03"
+              name="NIXXE Gateway"
+              description="An enterprise platform designed to simplify complex operational workflows and data."
+              tags={["Product Design", "Web", "Enterprise"]}
+              cover={{ ...nixxe.cover, frame: "desktop" }}
+            />
+          </Reveal>
         </div>
 
         <Reveal>
-          <p className="mt-16 text-sm text-ink-soft">
-            Alongside product design, I&rsquo;ve designed 50+ websites and digital experiences
-            across different industries.{" "}
+          <div className="mt-20 flex flex-col gap-6 border-t border-line pt-10 sm:mt-24 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <h3 className="font-serif text-xl font-medium tracking-tight text-ink sm:text-2xl">
+                Other Projects
+              </h3>
+              <p className="mt-2 max-w-md text-sm leading-relaxed text-ink-soft">
+                A selection of additional digital products, websites and experiences across different
+                industries.
+              </p>
+            </div>
             <Link
               href="/work/websites"
-              className="focus-ring text-ink underline underline-offset-4 decoration-line hover:decoration-accent"
+              className="focus-ring group flex shrink-0 items-center gap-1.5 text-sm font-medium text-accent-ink"
             >
-              View the Web &amp; Digital Experiences gallery →
+              Explore other projects
+              <span aria-hidden className="inline-block transition-transform duration-300 group-hover:translate-x-1">
+                →
+              </span>
             </Link>
-          </p>
+          </div>
         </Reveal>
       </Container>
     </div>
