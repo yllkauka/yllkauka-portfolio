@@ -128,7 +128,6 @@ export default function Home() {
                 tags={["Product Design", "Web", "Mobile", "SaaS"]}
                 cover={{ ...swifty.cover, frame: "desktop" }}
                 priority
-                featured
               />
             </Reveal>
 
