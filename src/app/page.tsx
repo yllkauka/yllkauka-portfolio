@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/Container";
 import { Button } from "@/components/Button";
@@ -234,23 +235,32 @@ export default function Home() {
       <section className="border-t border-line py-20 sm:py-28">
         <Container>
           <Reveal>
-            <div className="flex flex-col items-start justify-between gap-10 sm:flex-row sm:items-end">
-              <div className="max-w-xl">
+            <div className="grid grid-cols-1 items-center gap-10 sm:grid-cols-[1fr_280px] sm:gap-16">
+              <div>
                 <p className="text-xs font-medium uppercase tracking-[0.16em] text-accent-ink">About</p>
-                <h2 className="mt-4 font-serif text-3xl font-medium tracking-tight text-ink sm:text-4xl">
+                <h2 className="mt-4 max-w-xl font-serif text-3xl font-medium tracking-tight text-ink sm:text-4xl">
                   5+ years designing products from the ground up.
                 </h2>
-                <p className="mt-5 text-base leading-relaxed text-ink-soft">{homeSummary}</p>
+                <p className="mt-5 max-w-xl text-base leading-relaxed text-ink-soft">{homeSummary}</p>
+                <Link
+                  href="/about"
+                  className="focus-ring group mt-6 flex w-fit items-center gap-1.5 text-sm font-medium text-accent-ink"
+                >
+                  More about me
+                  <span aria-hidden className="inline-block transition-transform duration-300 group-hover:translate-x-1">
+                    →
+                  </span>
+                </Link>
               </div>
-              <Link
-                href="/about"
-                className="focus-ring group flex shrink-0 items-center gap-1.5 text-sm font-medium text-accent-ink"
-              >
-                More about me
-                <span aria-hidden className="inline-block transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
-              </Link>
+              <div className="relative order-first aspect-square w-full max-w-[280px] overflow-hidden rounded-md border border-line sm:order-none sm:max-w-none">
+                <Image
+                  src="/images/home/profile.jpg"
+                  alt="Yllka Uka"
+                  fill
+                  sizes="280px"
+                  className="object-cover"
+                />
+              </div>
             </div>
           </Reveal>
         </Container>
