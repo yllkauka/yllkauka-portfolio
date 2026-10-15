@@ -1,7 +1,7 @@
 export const about = {
   intro: "Product Designer focused on making complex things feel simple.",
   body: [
-    "I'm a Product Designer with 4+ years of experience designing digital products across web, mobile, SaaS, enterprise platforms and internal tools.",
+    "I'm a Product Designer with 5+ years of experience designing digital products across web, mobile, SaaS, enterprise platforms and internal tools.",
     "I work across the full product design process — from understanding the problem and structuring the experience to designing interfaces, building scalable design systems, prototyping and preparing work for development.",
     "I've designed products from the ground up that are now used by 1,000+ users. Working across complex products has taught me to think beyond individual screens and design experiences as systems that can scale.",
   ],

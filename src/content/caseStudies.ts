@@ -144,17 +144,6 @@ export const caseStudies: CaseStudy[] = [
         "I created a shared design system — typography, colour, buttons, inputs, cards, tables, navigation, status badges and data components — built to be reusable and themeable rather than tied to a single screen or brand.",
       visuals: [],
     },
-    multiBrand: {
-      heading: "From one product to eight additional brands.",
-      intro:
-        "The underlying structure and components stayed consistent while each brand introduced its own colour palette, typography and identity — re-skinned across roughly eight additional betting brands.",
-      visuals: [
-        { src: "/images/swifty-sports/brand-a.jpg", alt: "Brand A theme", frame: "desktop", caption: "Brand A" },
-        { src: "/images/swifty-sports/brand-b.jpg", alt: "Brand B theme", frame: "desktop", caption: "Brand B" },
-        { src: "/images/swifty-sports/brand-c.jpg", alt: "Brand C theme", frame: "desktop", caption: "Brand C" },
-        { src: "/images/swifty-sports/brand-d.jpg", alt: "Brand D theme", frame: "desktop", caption: "Brand D" },
-      ],
-    },
     responsive: {
       heading: "One experience, every screen size.",
       intro:

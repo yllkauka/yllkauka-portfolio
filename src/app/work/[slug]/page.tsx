@@ -187,12 +187,6 @@ export default async function CaseStudyPage(props: PageProps<"/work/[slug]">) {
         </CaseStudySection>
       )}
 
-      {project.multiBrand && (
-        <CaseStudySection eyebrow="Multi-brand system" heading={project.multiBrand.heading} description={project.multiBrand.intro}>
-          <ImageGallery items={project.multiBrand.visuals} layout="grid" />
-        </CaseStudySection>
-      )}
-
       {project.responsive && responsiveVisuals.length > 0 && (
         <CaseStudySection eyebrow="Responsive design" heading={project.responsive.heading} description={project.responsive.intro}>
           <ImageGallery items={responsiveVisuals} layout="responsive" />

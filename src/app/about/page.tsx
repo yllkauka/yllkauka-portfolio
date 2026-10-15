@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { Container } from "@/components/Container";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Reveal } from "@/components/Reveal";
@@ -18,7 +17,7 @@ export default function AboutPage() {
       <div className="relative">
         <div className="accent-wash" aria-hidden />
         <Container className="pt-20 sm:pt-28">
-          <div className="grid grid-cols-1 gap-12 sm:grid-cols-[1fr_280px] sm:items-start sm:gap-16">
+          <div className="grid grid-cols-1">
             <Reveal>
               <p className="mb-4 text-xs font-medium uppercase tracking-[0.16em] text-accent-ink">
                 About
@@ -32,18 +31,6 @@ export default function AboutPage() {
                     {p}
                   </p>
                 ))}
-              </div>
-            </Reveal>
-            <Reveal delay={120} className="order-first sm:order-none">
-              <div className="relative aspect-square w-full max-w-[280px] overflow-hidden rounded-md border border-line sm:max-w-none">
-                <Image
-                  src="/images/about/profile.jpg"
-                  alt="Yllka Uka"
-                  fill
-                  sizes="280px"
-                  className="object-cover"
-                  priority
-                />
               </div>
             </Reveal>
           </div>

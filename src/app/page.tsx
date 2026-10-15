@@ -238,7 +238,7 @@ export default function Home() {
               <div className="max-w-xl">
                 <p className="text-xs font-medium uppercase tracking-[0.16em] text-accent-ink">About</p>
                 <h2 className="mt-4 font-serif text-3xl font-medium tracking-tight text-ink sm:text-4xl">
-                  4+ years designing products from the ground up.
+                  5+ years designing products from the ground up.
                 </h2>
                 <p className="mt-5 text-base leading-relaxed text-ink-soft">{homeSummary}</p>
               </div>

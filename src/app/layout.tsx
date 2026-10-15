@@ -21,7 +21,7 @@ const title = {
   template: "%s — Yllka Uka",
 };
 const description =
-  "Yllka Uka is a Product Designer with 4+ years of experience designing clear, scalable digital products — from complex SaaS platforms and enterprise tools to mobile apps and web experiences.";
+  "Yllka Uka is a Product Designer with 5+ years of experience designing clear, scalable digital products — from complex SaaS platforms and enterprise tools to mobile apps and web experiences.";
 
 export const metadata: Metadata = {
   title,
