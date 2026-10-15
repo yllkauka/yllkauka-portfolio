@@ -42,22 +42,6 @@ export const webGallery: WebGalleryItem[] = [
     ],
   },
   {
-    slug: "tentplanner",
-    name: "TentPlanner",
-    industry: "Events",
-    description: "A web-based planning tool that lets marquee and tent-hire clients design their own event layout before requesting a quote.",
-    url: "https://www.tentplanner.co.uk/",
-    desktop: { src: "/images/websites/tentplanner-desktop.jpg", alt: "TentPlanner — desktop", frame: "desktop" },
-    mobile: { src: "/images/websites/tentplanner-mobile.jpg", alt: "TentPlanner — mobile", frame: "mobile" },
-    scope: ["Product Design", "UX/UI", "Interaction Design"],
-    designFocus: [
-      "Guided step-by-step flow",
-      "Clear interactive controls",
-      "Intuitive navigation",
-      "Consistent visual language",
-    ],
-  },
-  {
     slug: "skylab",
     name: "SkyLab",
     industry: "Cloud Infrastructure",
