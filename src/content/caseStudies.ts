@@ -147,12 +147,12 @@ export const caseStudies: CaseStudy[] = [
     multiBrand: {
       heading: "From one product to eight additional brands.",
       intro:
-        "The underlying structure and components stayed consistent while each brand introduced its own colour palette, typography and identity — re-skinned across roughly eight additional betting brands, including TigerBet, BetVickers, MetaBetting and BrillBet.",
+        "The underlying structure and components stayed consistent while each brand introduced its own colour palette, typography and identity — re-skinned across roughly eight additional betting brands.",
       visuals: [
-        { src: "/images/swifty-sports/brand-tigerbet.jpg", alt: "TigerBet brand theme", frame: "desktop", caption: "TigerBet" },
-        { src: "/images/swifty-sports/brand-betvickers.jpg", alt: "BetVickers brand theme", frame: "desktop", caption: "BetVickers" },
-        { src: "/images/swifty-sports/brand-metabetting.jpg", alt: "MetaBetting brand theme", frame: "desktop", caption: "MetaBetting" },
-        { src: "/images/swifty-sports/brand-brillbet.jpg", alt: "BrillBet brand theme", frame: "desktop", caption: "BrillBet" },
+        { src: "/images/swifty-sports/brand-a.jpg", alt: "Brand A theme", frame: "desktop", caption: "Brand A" },
+        { src: "/images/swifty-sports/brand-b.jpg", alt: "Brand B theme", frame: "desktop", caption: "Brand B" },
+        { src: "/images/swifty-sports/brand-c.jpg", alt: "Brand C theme", frame: "desktop", caption: "Brand C" },
+        { src: "/images/swifty-sports/brand-d.jpg", alt: "Brand D theme", frame: "desktop", caption: "Brand D" },
       ],
     },
     responsive: {
